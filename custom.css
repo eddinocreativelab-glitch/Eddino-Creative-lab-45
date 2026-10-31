@@ -261,3 +261,7 @@ html[data-theme=dark] #water { opacity: .45; }
 /* ---------- Water effect: smaller ripple (app.js) and fully opaque ---------- */
 #water { opacity: 1; }
 html[data-theme=dark] #water { opacity: 1; }
+
+
+/* Contact form: error message under the form */
+.form-note.is-error { color: #b42318; }

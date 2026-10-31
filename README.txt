@@ -103,9 +103,21 @@ Blender procedural materials cannot be exported directly, which is why the scrip
 CONTACT PAGE
 ------------
 Shows the email, a WhatsApp button (logo + "Chat on WhatsApp", opens your WhatsApp) and the contact form.
-IMPORTANT: the contact form does not send messages yet. It only shows the
-"thank you" message. To receive messages, connect the form to a form service
-(for example Formspree or Google Forms) or ask for it to be connected.
+The form sends messages to Formspree (endpoint in contact-form.js, form ID xkjjvdwp).
+Messages arrive in the inbox linked to that Formspree account. Errors are shown to the visitor.
+To change the destination, edit FORMSPREE_ENDPOINT at the top of contact-form.js.
+
+GOOGLE ANALYTICS AND SEARCH ENGINES
+-----------------------------------
+Google Analytics 4: paste your Measurement ID (G-...) in config.js > analytics > measurementId.
+  Leave it empty and no tracking is loaded. analytics.js sends page views for each menu page,
+  email / WhatsApp / social clicks, and contact form messages ("generate_lead").
+Site address: config.js > siteUrl, and the SITE_URL line in tools/update_blog.py
+  (used by the sitemap). Also check the canonical and og:image links in index.html.
+Search: robots.txt and sitemap.xml are in the site folder. The sitemap is rebuilt
+  each time you run the blog update (update-blog.bat). Submit the sitemap in Google Search Console.
+Titles and descriptions: the home title is in content.js > titles > home; the static
+  description and social preview are in index.html (<head>).
 
 TO FILL BEFORE PUBLISHING
 -------------------------

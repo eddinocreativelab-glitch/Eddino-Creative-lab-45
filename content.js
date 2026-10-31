@@ -10,7 +10,7 @@
 window.EDDINO_CONTENT = {
   "en": {
     "titles": {
-      "home": "Eddino Creative Lab",
+      "home": "Eddino Creative Lab · Video, graphic design & web presence",
       "about": "About · Eddino Creative Lab",
       "services": "Services · Eddino Creative Lab",
       "contact": "Contact · Eddino Creative Lab",
@@ -153,7 +153,9 @@ window.EDDINO_CONTENT = {
       "sent": "Thank you! Your message is on its way.",
       "invalid": "Please fill in every field with a valid email address.",
       "reply": "Thanks. We will reply to {email} soon.",
-      "whatsapp": "Chat on WhatsApp"
+      "whatsapp": "Chat on WhatsApp",
+      "sending": "Sending…",
+      "error": "Sorry, your message could not be sent. Please try again, or write to us on WhatsApp."
     },
     "presentation": {
       "tape": "Our presentation",
@@ -176,7 +178,7 @@ window.EDDINO_CONTENT = {
   },
   "fr": {
     "titles": {
-      "home": "Eddino Creative Lab",
+      "home": "Eddino Creative Lab · Vidéo, graphisme & présence digitale",
       "about": "À propos · Eddino Creative Lab",
       "services": "Services · Eddino Creative Lab",
       "contact": "Contact · Eddino Creative Lab",
@@ -319,7 +321,9 @@ window.EDDINO_CONTENT = {
       "sent": "Merci ! Votre message est bien parti.",
       "invalid": "Merci de remplir tous les champs avec une adresse e-mail valide.",
       "reply": "Merci. Nous vous répondrons à {email} très bientôt.",
-      "whatsapp": "Écrire sur WhatsApp"
+      "whatsapp": "Écrire sur WhatsApp",
+      "sending": "Envoi en cours…",
+      "error": "Désolé, votre message n'a pas pu être envoyé. Réessayez, ou écrivez-nous sur WhatsApp."
     },
     "presentation": {
       "tape": "Notre présentation",

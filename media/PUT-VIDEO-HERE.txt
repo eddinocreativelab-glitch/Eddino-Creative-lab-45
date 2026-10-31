@@ -1,0 +1,9 @@
+Put your 9:16 presentation video here, named exactly:
+
+    presentation-9x16.mp4
+
+Optional poster image (shown before the video plays):
+
+    presentation-poster.jpg
+
+See README.txt, section "Presentation video".

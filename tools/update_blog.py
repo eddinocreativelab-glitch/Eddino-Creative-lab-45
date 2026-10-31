@@ -19,6 +19,7 @@ Rules for a post (the values are read from the <head> of the post file)
   <meta name="status" ...>        -> "published" (default) or "draft" (hidden)
 
 Files whose name starts with "_" (like _template.html) are ignored.
+It also writes sitemap.xml (home page + published posts) for search engines.
 Only the Python standard library is used: nothing to install.
 """
 import datetime
@@ -26,10 +27,14 @@ import json
 import sys
 from html.parser import HTMLParser
 from pathlib import Path
+from xml.sax.saxutils import escape
 
 SITE = Path(__file__).resolve().parent.parent
 POSTS_DIR = SITE / "blog" / "posts"
 OUTPUT = SITE / "blog" / "posts.js"
+SITEMAP = SITE / "sitemap.xml"
+# Public address of the site. Change it here if the domain is different.
+SITE_URL = "https://www.eddinocreativelab.com"
 
 
 class HeadReader(HTMLParser):
@@ -61,6 +66,22 @@ def read_post(path):
     reader = HeadReader()
     reader.feed(path.read_text(encoding="utf-8"))
     return reader
+
+
+def write_sitemap(posts):
+    """Writes sitemap.xml: the home page and every published blog post."""
+    lines = [
+        '<?xml version="1.0" encoding="UTF-8"?>',
+        '<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">',
+        f"  <url><loc>{escape(SITE_URL + '/')}</loc></url>",
+    ]
+    for post in posts:
+        lines.append(
+            f"  <url><loc>{escape(SITE_URL + '/' + post['file'])}</loc>"
+            f"<lastmod>{post['date']}</lastmod></url>"
+        )
+    lines.append("</urlset>")
+    SITEMAP.write_text("\n".join(lines) + "\n", encoding="utf-8")
 
 
 def main():
@@ -119,7 +140,9 @@ def main():
     body = "window.EDDINO_BLOG_POSTS = " + json.dumps(posts, ensure_ascii=False, indent=2) + ";\n"
     OUTPUT.write_text(header + body, encoding="utf-8")
 
-    print(f"Blog index written: {len(posts)} published post(s).")
+    write_sitemap(posts)
+
+    print(f"Blog index written: {len(posts)} published post(s). sitemap.xml updated.")
     for post in posts:
         print(f"  - {post['date']}  {post['file']}")
     for note in notes:

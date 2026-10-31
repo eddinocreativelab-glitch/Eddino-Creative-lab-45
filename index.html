@@ -3,8 +3,67 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Eddino Creative Lab</title>
-    <meta name="description" content="Eddino Creative Lab is a creative agency crafting visuals, stories and digital presence for brands." />
+    <title>Eddino Creative Lab · Video, graphic design & web presence</title>
+    <meta name="description" content="Eddino Creative Lab is an independent creative studio led by Eddino Martino: video editing, graphic design, web design and digital presence for brands." />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="Eddino Martino" />
+    <link rel="canonical" href="https://www.eddinocreativelab.com/" />
+    <meta property="og:type" content="website" />
+    <meta property="og:site_name" content="Eddino Creative Lab" />
+    <meta property="og:title" content="Eddino Creative Lab · Video, graphic design & web presence" />
+    <meta property="og:description" content="Video editing, graphic design, web design and digital presence for brands that want to stand out, naturally." />
+    <meta property="og:url" content="https://www.eddinocreativelab.com/" />
+    <meta property="og:image" content="https://www.eddinocreativelab.com/brand/brand-presentation.jpg" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="1200" />
+    <meta property="og:locale" content="en_US" />
+    <meta property="og:locale:alternate" content="fr_FR" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Eddino Creative Lab · Video, graphic design & web presence" />
+    <meta name="twitter:description" content="Video editing, graphic design, web design and digital presence for brands." />
+    <meta name="twitter:image" content="https://www.eddinocreativelab.com/brand/brand-presentation.jpg" />
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.eddinocreativelab.com/#website",
+          "url": "https://www.eddinocreativelab.com/",
+          "name": "Eddino Creative Lab",
+          "inLanguage": ["en", "fr"]
+        },
+        {
+          "@type": "ProfessionalService",
+          "@id": "https://www.eddinocreativelab.com/#organization",
+          "name": "Eddino Creative Lab",
+          "url": "https://www.eddinocreativelab.com/",
+          "logo": "https://www.eddinocreativelab.com/brand/logo-mark.png",
+          "image": "https://www.eddinocreativelab.com/brand/brand-presentation.jpg",
+          "description": "Independent creative studio: video editing and motion design, graphic design, web design and digital presence, custom business tools.",
+          "email": "contact@eddinocreativelab.com",
+          "founder": { "@type": "Person", "name": "Eddino Martino", "jobTitle": "Digital visual artist" },
+          "sameAs": [
+            "https://www.instagram.com/eddinocreativelab",
+            "https://www.facebook.com/share/1HWiMgXNT6/",
+            "https://www.linkedin.com/company/eddinocreativelab/"
+          ],
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "customer service",
+            "email": "contact@eddinocreativelab.com",
+            "availableLanguage": ["English", "French"]
+          },
+          "makesOffer": [
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Video editing and motion design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Graphic design" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Web design and digital presence" } },
+            { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Custom business software and tools" } }
+          ]
+        }
+      ]
+    }
+    </script>
     <link rel="icon" href="brand/mark.png" />
     <link rel="stylesheet" href="app.css" />
     <link rel="stylesheet" href="custom.css" />
@@ -13,6 +72,21 @@
     <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
   </head>
   <body>
+    <noscript>
+      <main>
+        <h1>Eddino Creative Lab</h1>
+        <p>Eddino Creative Lab is an independent creative studio led by Eddino Martino, a digital visual artist. We bring together video editing, graphic design, web design and digital presence, so your brand looks sharp and feels consistent everywhere.</p>
+        <h2>Services</h2>
+        <ul>
+          <li>Video editing and motion design</li>
+          <li>Graphic design: logos, visual identity, social media graphics, print</li>
+          <li>Web design and digital presence</li>
+          <li>Creative solutions: custom internal software and business tools</li>
+        </ul>
+        <p>Contact: <a href="mailto:contact@eddinocreativelab.com">contact@eddinocreativelab.com</a></p>
+        <p>Enable JavaScript to browse the full site.</p>
+      </main>
+    </noscript>
     <canvas id="scene" aria-hidden="true"></canvas>
     <div class="bg-blobs" aria-hidden="true"><span class="b1"></span><span class="b2"></span><span class="b3"></span></div>
     <canvas id="water" aria-hidden="true"></canvas>
@@ -114,6 +188,12 @@
 
     <!-- Readable page code: presentation, blog list, 3D pencil -->
     <script src="pages.js"></script>
+
+    <!-- Contact form: sends messages to Formspree (replaces the placeholder in app.js) -->
+    <script src="contact-form.js"></script>
+
+    <!-- Google Analytics 4 (only loads when a Measurement ID is set in config.js) -->
+    <script src="analytics.js"></script>
 
     <!-- The site engine (3D logo, transitions, language, dark mode). Minified: do not edit. -->
     <script src="app.js" defer></script>

@@ -24,6 +24,15 @@ window.EDDINO_CONFIG = {
     linkedin: "https://www.linkedin.com/company/eddinocreativelab/"
   },
 
+  // Public web address of the site (used for links, sitemap and social previews).
+  siteUrl: "https://www.eddinocreativelab.com",
+
+  // Google Analytics 4. Paste your Measurement ID (starts with G-, e.g. G-AB12CD34EF).
+  // Leave it empty to turn tracking off.
+  analytics: {
+    measurementId: ""
+  },
+
   // Company presentation video (Presentation page).
   // The video must be vertical, 9:16 (for example 1080 x 1920 pixels), MP4 format.
   presentation: {
