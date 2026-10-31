@@ -1,0 +1,57 @@
+<!doctype html>
+<!--
+  BLOG POST TEMPLATE
+  ==================
+  1. Copy this file into blog/posts/ and give it a short name, for example:
+       blog/posts/why-brand-consistency-matters.html
+     (lowercase, no spaces, no accents). Files starting with "_" are ignored.
+  2. Change the 4 required lines in <head> (title, description, date, category).
+  3. Write your article in the <main> part below. Keep the structure.
+  4. Save the file, then double-click update-blog.bat (Windows) so the post appears
+     on the Blog page. Nothing else to change.
+  Set status to "draft" to keep a post hidden while you write it.
+-->
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- REQUIRED: the title shown on the Blog page -->
+    <title>Your post title</title>
+    <!-- REQUIRED: one or two sentences shown on the Blog page -->
+    <meta name="description" content="A short summary of the article." />
+    <!-- REQUIRED: publication date, YYYY-MM-DD -->
+    <meta name="date" content="2026-10-30" />
+    <!-- OPTIONAL: small label above the title, for example Design, Video, Web -->
+    <meta name="category" content="Design" />
+    <!-- OPTIONAL: "published" (default) or "draft" (hidden from the Blog page) -->
+    <meta name="status" content="published" />
+
+    <link rel="icon" href="../../brand/mark.png" />
+    <link rel="stylesheet" href="../../app.css" />
+    <link rel="stylesheet" href="../../custom.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  </head>
+  <body class="post-page">
+    <main class="view">
+      <a class="btn btn--ghost post-back" href="../../index.html#/blog">&larr; Back to the blog</a>
+
+      <article class="glass post-body">
+        <span class="tape small">Category</span>
+        <h1>Your post title</h1>
+        <p class="lead">The introduction of the article, shown in larger text.</p>
+
+        <h2>First section</h2>
+        <p>Your text goes here. Each paragraph is a &lt;p&gt; block.</p>
+
+        <!-- Optional image: put the file in blog/posts/images/ and use this line -->
+        <!-- <img src="images/my-picture.jpg" alt="Short description of the picture" /> -->
+
+        <h2>Second section</h2>
+        <p>Another paragraph.</p>
+      </article>
+    </main>
+  </body>
+</html>
